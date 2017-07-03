@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: #aaa;
+        }
+
+        .bg,
+        .pane {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .bg {
+            position: relative;
+            background: url(images/2.png) center center no-repeat;
+            border: 1px solid #b0f9e4;
+        }
+
+        .pane {
+            position: absolute;
+            z-index: -1;
+            background: url(images/4.png) center center no-repeat;
+            animation: move 1.5s ease-in-out infinite ;
+            -webkit-animation: move 1.5s ease-in-out infinite;
+        }
+        @keyframes move {
+            from{top:-200px}
+            to{top:0}
+        }
+        -webkit-@keyframes move {
+            from{top:-200px}
+            to{top:0}
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+    <div class="pane"></div>
+    </div>
+</body>
+</html>
+
